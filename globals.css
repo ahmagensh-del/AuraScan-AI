@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Ultra-premium background */
+body {
+  background: radial-gradient(circle at 50% 20%, #101726, #05080d 65%, #000 100%);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Floating aura light */
+.floating-light {
+  position: absolute;
+  top: 15%;
+  right: 18%;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(0,140,255,0.45), transparent 70%);
+  filter: blur(80px);
+  animation: pulseSlow 8s infinite;
+}
+
+/* Center core glow */
+.central-aura {
+  width: 1100px;
+  height: 1100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%,
+      rgba(90,140,255,0.25),
+      rgba(150,90,255,0.2),
+      rgba(255,60,255,0.15),
+      transparent 70%);
+  filter: blur(120px);
+  animation: pulseSlow 10s infinite;
+}
+
+/* Glass input */
+.input-glass {
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 35px rgba(255,255,255,0.07);
+}
+
+/* Premium button */
+.btn-premium {
+  background: linear-gradient(90deg, #00e1ff, #7b5cff, #ff00d4);
+  box-shadow: 0 5px 25px rgba(123,92,255,0.7);
+}
+.btn-premium:hover {
+  box-shadow: 0 5px 40px rgba(123,92,255,1);
+}
+
+/* Animations */
+@keyframes pulseSlow {
+  0%,100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-fade {
+  animation: fade 1s ease forwards;
+}
+
+@keyframes fade {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
