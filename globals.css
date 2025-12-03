@@ -69,3 +69,56 @@ body {
   0% { opacity: 0; transform: translateY(15px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+/* === FLOATING PARTICLES === */
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #6bb6ff, transparent);
+  opacity: 0.2;
+  border-radius: 50%;
+  animation: floatParticle 12s linear infinite;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(1); opacity: 0.25; }
+  50% { transform: translateY(-60px) scale(1.4); opacity: 0.4; }
+  100% { transform: translateY(0) scale(1); opacity: 0.2; }
+}
+
+/* === SOFT SIDE GRADIENTS === */
+.side-glow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.side-left {
+  left: -10%;
+  background: radial-gradient(circle at right, #3b1e7a55, transparent);
+}
+
+.side-right {
+  right: -10%;
+  background: radial-gradient(circle at left, #164b8a55, transparent);
+}
+
+/* === TITLE PULSE === */
+.title-pulse {
+  animation: titlePulse 4s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+  0%, 100% { text-shadow: 0 0 20px rgba(255,255,255,0.2); }
+  50% { text-shadow: 0 0 40px rgba(255,255,255,0.45); }
+}
