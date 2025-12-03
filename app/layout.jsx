@@ -7,8 +7,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+
+        {/* ░░ TON CONNECT UI — CDN ░░ */}
+        <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+
+        {children}
+
+      </body>
     </html>
   );
 }
